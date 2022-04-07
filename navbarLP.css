@@ -269,12 +269,93 @@ nav ul li a {
         width: 200px;
     }
 }
+@media (max-width: 600px) {
+    .hero button {
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+}
+section.hero2 {
+    padding-top: 140px;
+}
+section.hero2 .hero-content2 {
+    display: flex;
+    width: 90vw;
+    max-width: 1300px;
+    margin: auto;
+    align-items: center;
+}
+section.hero2 .hero-content2 .left-content button {
+    width: 260px;
+    height: 60px;
+    font-size: 25px;
+    border-radius: 50px;
+    margin-top: 20px;
+    border: none;
+    color: white;
+    background-color: var(--main-orange);
+    box-shadow: 0 0 4px rgb(114, 114, 114);
+}
+section.hero2 .hero-content2 .left-content button:hover {
+    cursor: pointer;
+}
+section.hero2 .hero-content2 .left-content h2 {
+    color: var(--main-orange);
+    font-size: 40px;
+}
+section.hero2 .hero-content2 .left-content p {
+    color: black;
+    font-size: 20px;
+}
+section.hero2 .hero-content2 .right-content .juju-image {
+    width: 700px;
+}
+@media (max-width: 1100px) {
+    section.hero2 .hero-content2 .right-content .juju-image {
+        width: 500px;
+    }
+    section.hero2 .hero-content2 .left-content p {
+        font-size: 16px;
+    }
+    section.hero2 .hero-content2 .left-content h2 {
+        font-size: 25px;
+    }
+    section.hero2 .hero-content2 .left-content button {
+        width: 200px;
+        height: 50px;
+        font-size: 20px;
+        margin-top: 15px;
+    }
+}
+@media (max-width: 868px) {
+    section.hero2 .hero-content2 .right-content .juju-image {
+        width: 350px;
+    }
+    section.hero2 .hero-content2 .left-content button {
+        width: 180px;
+        height: 40px;
+        font-size: 16px;
+        margin-top: 15px;
+    }
+}
+@media (max-width: 650px) {
+    section.hero2 .hero-content2 {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+}
 /* end of hero section */
 
 /* start of about us section */
 section.about-us {
     margin-top: 100px;
     position: relative;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 section.about-us .upper {
     background-color: var(--main-orange);
@@ -290,6 +371,13 @@ section.about-us .upper {
 section.about-us .upper h1 {
     font-size: 35px;
     font-weight: bold;
+}
+section.about-us .lower {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    max-width: 1300px;
+    width: 90vw;
 }
 section.about-us .upper p,
 section.about-us .lower p {
@@ -311,22 +399,20 @@ section.about-us .upper .small-box {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-section.about-us .lower {
-    display: flex;
-    margin: auto;
-    justify-content: space-between;
-    max-width: 1300px;
-    width: 90vw;
-}
 section.about-us .lower .left,
 section.about-us .lower .right {
-    width: 630px;
+    /* width: 630px; */
     padding: 3vh 4vh 5vh 4vh;
     background-color: white;
     margin-top: -50px;
     position: relative;
     border-radius: 20px;
     text-align: justify;
+    width: 100%;
+}
+section.about-us .lower .gap-between-lower {
+    width: 50px;
+    /* background-color: blue; */
 }
 
 section.about-us .lower .left .small-box,
@@ -373,6 +459,9 @@ section.about-us .lower .right .small-box h1 {
     section.about-us .lower .right {
         width: 43.5vw;
     }
+    section.about-us .lower .gap-between-lower {
+        width: 50px;
+    }
 }
 @media (max-width: 868px) {
     section.about-us .upper {
@@ -405,6 +494,10 @@ section.apa {
     max-width: 1300px;
     margin: auto;
     margin-top: 100px;
+    background-image: url("images/dash-line.png");
+    background-size: 5px 1200px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 section.apa h1 {
     font-size: 40px;
@@ -445,6 +538,9 @@ section.apa .content .dummy-box p {
     display: none;
 }
 @media (max-width: 1100px) {
+    section.apa {
+        background-size: 5px 1000px;
+    }
     section.apa .content .content-box h2,
     section.apa .content .dummy-box h2 {
         font-size: 25px;
@@ -463,6 +559,9 @@ section.apa .content .dummy-box p {
     }
 }
 @media (max-width: 868px) {
+    section.apa {
+        background-size: 5px 900px;
+    }
     section.apa h1 {
         font-size: 30px;
         margin-bottom: 60px;
@@ -486,6 +585,7 @@ section.apa .content .dummy-box p {
     }
     section.apa {
         margin-top: 50px;
+        background-image: none;
     }
     section.apa h1 {
         font-size: 24px;
@@ -588,6 +688,9 @@ footer .copyright {
     footer .copyright {
         font-size: 12px;
         height: 20px;
+    }
+    footer .center .lombacademy-text {
+        font-size: 18px;
     }
 }
 /*end of footer*/
